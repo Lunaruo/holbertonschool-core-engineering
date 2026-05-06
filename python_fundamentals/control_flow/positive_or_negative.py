@@ -6,10 +6,10 @@ zero = "is zero"
 negative = "is negative"
 
 if number >= 1:
-    print(number , positive)
+    print(number, positive)
 
 elif number == 0:
-    print(number , zero)
+    print(number, zero)
 
 elif number < 0:
-    print(number , negative)
+    print(number, negative)
