@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 
-s = ""
-for c in range(ord('a'), ord('z') + 1):
-    if c != ord('e') and c != ord('q'):
-        s += chr(c)
-
-print("{}".format(s))
+for i in range(97, 123):
+    if i != 101 and i != 113:
+        print("{}".format(chr(i)), end="")
+#  print every char from chr(97) to chr(122)
+#  chr(123) is exclued
