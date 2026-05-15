@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
+"""create a class"""
 
- """create a class name square that represents a square"""
+
 class Square:
+ """create a class named square that represents a square"""
     pass
 
