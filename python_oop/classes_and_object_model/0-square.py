@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
-"""create a class"""
+"""
+Defines a Square class.
+"""
 
 
 class Square:
- """create a class named square that represents a square"""
-    pass
+    """
+    Represents a square.
+    """
 
+    pass
