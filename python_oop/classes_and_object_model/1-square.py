@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+"""Define a square size"""
+
 
 class Square:
     """
