@@ -1,4 +1,6 @@
-#!/usr/bin/env python3 
+#!/usr/bin/env python3
+"""Add validations to the size attribute on the square class"""
+
 
 class Square:
     """
