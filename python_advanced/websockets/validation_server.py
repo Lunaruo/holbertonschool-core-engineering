@@ -2,19 +2,23 @@
 
 import asyncio
 import websockets
+from websockets.exceptions import ConnectionClosed
 
 
 async def validate(websocket):
-    async for message in websocket:
-        if message.strip() == "":
-            await websocket.send("ERR:EMPTY")
-        else:
-            await websocket.send(f"OK:{message}")
+    try:
+        async for message in websocket:
+            if message.strip() == "":
+                await websocket.send("ERR:EMPTY")
+            else:
+                await websocket.send(f"OK:{message}")
+    except ConnectionClosed:
+        pass
 
 
 async def main():
     async with websockets.serve(validate, "localhost", 8765):
-        await asyncio.Future()  # Run forever
+        await asyncio.Future()
 
 
 if __name__ == "__main__":
