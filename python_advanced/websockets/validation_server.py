@@ -5,7 +5,7 @@ import websockets
 from websockets.exceptions import ConnectionClosed
 
 
-async def validate(websocket):
+async def connection_handler(websocket):
     try:
         async for message in websocket:
             if message.strip() == "":
@@ -17,7 +17,7 @@ async def validate(websocket):
 
 
 async def main():
-    async with websockets.serve(validate, "localhost", 8765):
+    async with websockets.serve(connection_handler, "localhost", 8765):
         await asyncio.Future()
 
 
