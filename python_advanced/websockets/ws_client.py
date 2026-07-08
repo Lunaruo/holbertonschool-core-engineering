@@ -14,7 +14,7 @@ async def connect_and_send(uri, message):
 
 async def main():
     uri = os.getenv("WS_URI", "ws://localhost:8765")
-    response = await connect_and_send(uri, "Hello WebSocket")
+    response = await connect_and_send(uri, "demo")
     print(response, end="")
 
 
